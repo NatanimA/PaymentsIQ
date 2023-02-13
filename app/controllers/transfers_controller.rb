@@ -1,0 +1,2 @@
+class TransfersController < ApplicationController
+end
