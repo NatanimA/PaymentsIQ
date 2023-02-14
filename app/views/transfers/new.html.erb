@@ -1,0 +1,19 @@
+<%= form_with model: transfer, method: :post, url: category_transfers_path(params[:category_id]) ,scope: :new_transfer, local:true do |form| %>
+    <h3 class="display-3">Make Transfers</h3>
+    <hr>
+    <div class="mb-3">
+        <%= form.label :name,class:"form-label"%>
+        <%= form.text_field :name,class:"form-control", :required => true %>
+    </div>
+    <div>
+        <%= form.label :amount, class:"form-label" %>
+        <%= form.number_field :amount,in:1.0..1000000.0, class:"form-control", :required => true %>
+    </div>
+    <div class="mt-3">
+        <%= form.label :category, class:"form-label" %>
+        <%= form.collection_select :category,categories,:id,:name, class:"form-control", :required => true %>
+    </div>
+    <div class="mb-3 text-center">
+        <%= form.submit "Transfer",disable_with:"Making Transfer...", class:"btn btn-success" %>
+    </div>
+<% end %>
