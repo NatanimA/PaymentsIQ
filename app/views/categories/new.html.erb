@@ -1,0 +1,15 @@
+<%= form_with model: category, method: :post, url: categories_path ,scope: :new_category, local:true do |form| %>
+    <h3 class="display-3">Create Category</h3>
+    <hr>
+    <div class="mb-3">
+        <%= form.label :name,class:"form-label"%>
+        <%= form.text_field :name,class:"form-control", :required => true %>
+    </div>
+    <div>
+        <%= form.label :icon, class:"form-label" %>
+        <%= form.text_field :icon, class:"form-control", :required => true %>
+    </div>
+    <div class="mb-3 text-center">
+        <%= form.submit "Add Category",disable_with:"Creating Category...",data: { turbolinks: 'false' }, class:"btn btn-success" %>
+    </div>
+<% end %>

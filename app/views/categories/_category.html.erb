@@ -1,0 +1,22 @@
+<%= link_to category_path(category.id),class:"link-container" do %>
+<div class="card mb-3 mt-2" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col responsive-image">
+      <img src="<%= category.icon %>" class="img-fluid img-responsive rounded-start" alt="...">
+    </div>
+    <div class="col">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+        <h5 class="card-title"><%= category.name %></h5>
+        <% amount = 0 %>
+        <% category.transfers.each do |transfer| %>
+            <% amount += transfer.amount %>
+        <% end %>
+        <p class="card-text"><%= amount %></p>
+        </div>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
