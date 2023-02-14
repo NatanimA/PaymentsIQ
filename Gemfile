@@ -13,7 +13,7 @@ gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Font Awesome Icons
-gem "font-awesome-sass", "~> 6.3.0"
+gem 'font-awesome-sass', '~> 6.3.0'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
