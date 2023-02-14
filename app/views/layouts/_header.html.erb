@@ -1,0 +1,46 @@
+<nav>
+        <ul id="nav-menu">
+          <li class="nav-link"><a href="#work">Portfolio</a></li>
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#contacts">Contact</a></li>
+        </ul>
+        <div id="mobile-navbar">
+        <div class="top-nav-container d-flex justify-content-between">
+          <% if @name == "Categories" %>
+          <div id="hamb">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <% else %>
+            <%= link_to root_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-angles-left"></i>
+            <% end %>
+          <% end %>
+          <div class="current-page">
+            <span><%= @name %></span>
+          </div>
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          </div>
+          <ul id="mobile-nav-menu">
+            <li class="mobile-nav-link"><%= link_to "Home", root_path %></li>
+            <li class="mobile-nav-link">
+              <%= link_to  destroy_user_session_path, method: :get do %>
+                <i class="fa-solid fa-right-from-bracket"></i>
+              <% end %>
+            </li>
+            <li class="mobile-nav-link">Signed in as <%= current_user.email %></li>
+          </ul>
+    <div class="container-fluid recent-container">
+     <div class="row flex-row flex-nowrap nav-filter-container">
+        <div class="col-3">
+           Most recent
+        </div>
+        <div class="col-3">
+           Most Ancient
+        </div>
+    </div>
+    </div>
+</nav>
