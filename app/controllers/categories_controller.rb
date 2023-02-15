@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
     @category.user = current_user
     if @category.save
       flash[:notice] = 'Category successfully created'
-      redirect_to root_path
+      redirect_to categories_path
     else
       flash[:alert] = @category.errors.full_messages.join(', ')
       render 'new', locals: { category: @category }
