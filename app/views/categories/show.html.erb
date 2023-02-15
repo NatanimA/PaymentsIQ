@@ -1,0 +1,26 @@
+<div class="container-fluid d-flex justify-content-between transfer-flex-container">
+<% if @transfers.length != 0 %>
+<h5><%= @transfers[0].category.name %></h5>
+<% end %>
+<% amount = 0%>
+<% @transfers.each do |transfer| %>
+<% amount += transfer.amount %>
+<% end %>
+<span>$<%= amount %></span>
+</div>
+<hr>
+<div class="container-fluid  transfer-list-flex-container">
+    <% if @transfers.length != 0 %>
+        <% @transfers.each do |transfer| %>
+            <%= render transfer %>
+        <% end %>
+    <% else %>
+        <div>
+            <h6>No transactions found</h6>
+        </div>
+    <%end%>
+    <div class="w-100">
+    <%= link_to "Make Transfers" ,new_category_transfer_path(@category_id), class:"btn btn-success w-100 mt-3 make-transfers" %>
+    </div>
+</div>
+
