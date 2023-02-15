@@ -1,6 +1,7 @@
 <nav>
+  <% if user_signed_in?%>
         <ul id="nav-menu">
-          <li class="nav-link"><%= link_to "Home", root_path %></li>
+          <li class="nav-link"><%= link_to "Home", categories_path %></li>
           <li class="nav-link"><%= link_to "Profile", user_path(current_user.id) %></li>
           <li class="nav-link">
           <%= link_to  destroy_user_session_path, method: :get do %>
@@ -17,7 +18,7 @@
             <span class="bar"></span>
           </div>
           <% else %>
-            <%= link_to root_path,class:"link-container arrow-back-link" do %>
+            <%= link_to categories_path,class:"link-container arrow-back-link" do %>
                 <i class="fa-solid fa-chevron-left"></i>
             <% end %>
           <% end %>
@@ -29,7 +30,7 @@
           </div>
           </div>
           <ul id="mobile-nav-menu">
-            <li class="mobile-nav-link"><%= link_to "Home", root_path %></li>
+            <li class="mobile-nav-link"><%= link_to "Home", categories_path %></li>
             <li class="nav-link">
             <%= link_to user_path(current_user.id) do %>
                 <i class="nav-profile-pic fa-solid fa-user"></i>
@@ -52,4 +53,24 @@
         </div>
     </div>
     </div>
+    <% else %>
+      <% if current_page?(new_user_session_path)%>
+      <div class="d-flex mx-2 justify-content-between">
+        <%= link_to auth_login_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
+        <p class="text-light fs-3 align-self-start py-2">LOGIN</p>
+        <div></div>
+      </div>
+      <% else %>
+        <div class="d-flex mx-2 justify-content-between">
+        <%= link_to auth_login_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
+        <p class="text-light fs-3 align-self-start py-2">Register</p>
+        <div></div>
+      </div>
+      <% end %>
+    <% end %>
+
 </nav>

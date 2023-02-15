@@ -1,9 +1,6 @@
-<div class="login-container">
-<h1 class="display-1 logo-name">PaymentsIQ</h1>
-<div class="login-form-container">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <h2 class="display-2 align-middle">Log in</h2>
-  <div class="field">
+<div class="py-3">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do|f| %>
+  <div class="field mt-4">
     <%= f.email_field :email, autofocus: true,placeholder:"Email@mail.com",class:"mb-2", autocomplete: "email" %>
   </div>
 
@@ -22,7 +19,5 @@
     <%= f.submit "Log in",class:"btn btn-primary" %>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
-</div>
-</div>
