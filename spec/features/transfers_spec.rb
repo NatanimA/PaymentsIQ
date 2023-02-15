@@ -4,7 +4,6 @@ RSpec.describe TransfersController, type: :feature do
   let(:user) { FactoryBot.create(:user) }
   let(:category) { FactoryBot.create(:category, user:) }
 
-
   before(:each) do
     sign_in user
   end
