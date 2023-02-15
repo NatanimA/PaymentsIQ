@@ -12,7 +12,7 @@ RSpec.describe CategoriesController, type: :feature do
   describe 'Visits Index page' do
     it 'Should see all the categories listed for the user' do
       visit categories_path
-      expect(page).to have_content("Categories")
+      expect(page).to have_content('Categories')
     end
     it 'Should Redirect the user to categories Show' do
       visit categories_path

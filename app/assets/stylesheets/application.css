@@ -16,6 +16,7 @@
 body {
   color: #434b54;
 }
+
 .nav-filter-container {
   margin-top: 1rem;
   display: flex;
@@ -33,12 +34,12 @@ body {
 
 .btn-holder {
   width: 100%;
-  background-color:#5fb523
+  background-color: #5fb523;
 }
 
-.transfers-holder{
+.transfers-holder {
   height: 100%;
-  overflow-y:auto;
+  overflow-y: auto;
 }
 
 .img-responsive {
@@ -92,14 +93,13 @@ body {
   padding: 4rem;
 }
 
-.auth-login-container{
+.auth-login-container {
   position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color:hwb(0 100% 0%);
-
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
 }
 
 .auth-top-nav {
