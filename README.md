@@ -234,7 +234,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> I would like to thank Microverse for providing all the resources so that I can build this project.
+> Original design idea by Gregoire Vella on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
