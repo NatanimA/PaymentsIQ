@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex justify-content-between py-4">
+<div class="container-fluid d-flex justify-content-between transfer-flex-container">
 <% if @transfers.length != 0 %>
 <h5><%= @transfers[0].category.name %></h5>
 <% end %>
@@ -9,7 +9,7 @@
 <span>$<%= amount %></span>
 </div>
 <hr>
-<div class="container-fluid h-100">
+<div class="container-fluid  transfer-list-flex-container">
     <% if @transfers.length != 0 %>
         <% @transfers.each do |transfer| %>
             <%= render transfer %>
@@ -20,7 +20,7 @@
         </div>
     <%end%>
     <div class="w-100">
-    <%= link_to "Make Transfers" ,new_category_transfer_path(@category_id), class:"btn btn-success w-100 mt-3" %>
+    <%= link_to "Make Transfers" ,new_category_transfer_path(@category_id), class:"btn btn-success w-100 mt-3 make-transfers" %>
     </div>
 </div>
 

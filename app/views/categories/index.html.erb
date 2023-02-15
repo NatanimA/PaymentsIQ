@@ -1,7 +1,14 @@
+<div class="transfer-list-flex-container">
 <% @categories.each do |category| %>
     <%= render category %>
 <% end %>
+<% if @categories.length == 0 %>
+    <div>
+        <p class="display-4">No categories found.</p>
+    <div>
+<% end %>
 <div class="w-100">
-<%= link_to "Add Category" ,new_category_path,data: { turbolinks: 'false' }, class:"btn btn-success w-100 mt-3" %>
+<%= link_to "Add Category" ,new_category_path,data: { turbolinks: 'false' }, class:"btn btn-success w-100 mt-3 mb-4" %>
+</div>
 </div>
 

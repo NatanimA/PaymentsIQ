@@ -1,5 +1,5 @@
 <%= link_to category_path(category.id),class:"link-container" do %>
-<div class="card mb-3 mt-2" style="max-width: 540px;">
+<div class="card mb-3 mt-2 container-categories">
   <div class="row g-0">
     <div class="col responsive-image">
       <img src="<%= category.icon %>" class="img-fluid img-responsive rounded-start" alt="...">
@@ -12,9 +12,8 @@
         <% category.transfers.each do |transfer| %>
             <% amount += transfer.amount %>
         <% end %>
-        <p class="card-text"><%= amount %></p>
+        <p class="card-text cash-text">$<%= amount %></p>
         </div>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
   </div>

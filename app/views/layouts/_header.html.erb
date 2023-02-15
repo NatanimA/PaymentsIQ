@@ -1,8 +1,12 @@
 <nav>
         <ul id="nav-menu">
-          <li class="nav-link"><a href="#work">Portfolio</a></li>
-          <li class="nav-link"><a href="#about">About</a></li>
-          <li class="nav-link"><a href="#contacts">Contact</a></li>
+          <li class="nav-link"><%= link_to "Home", root_path %></li>
+          <li class="nav-link"><%= link_to "Profile", user_path(current_user.id) %></li>
+          <li class="nav-link">
+          <%= link_to  destroy_user_session_path, method: :get do %>
+                Sign Out
+          <% end %>
+          </li>
         </ul>
         <div id="mobile-navbar">
         <div class="top-nav-container d-flex justify-content-between">
@@ -14,7 +18,7 @@
           </div>
           <% else %>
             <%= link_to root_path,class:"link-container arrow-back-link" do %>
-                <i class="fa-solid fa-angles-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             <% end %>
           <% end %>
           <div class="current-page">
@@ -26,6 +30,11 @@
           </div>
           <ul id="mobile-nav-menu">
             <li class="mobile-nav-link"><%= link_to "Home", root_path %></li>
+            <li class="nav-link">
+            <%= link_to user_path(current_user.id) do %>
+                <i class="nav-profile-pic fa-solid fa-user"></i>
+            <% end %>
+            </li>
             <li class="mobile-nav-link">
               <%= link_to  destroy_user_session_path, method: :get do %>
                 <i class="fa-solid fa-right-from-bracket"></i>
