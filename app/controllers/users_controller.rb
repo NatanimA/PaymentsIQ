@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @name = "Profile"
+    @name = 'Profile'
     render :show
   end
 end

@@ -8,7 +8,7 @@ class TransfersController < ApplicationController
   end
 
   def create
-    @transfer = Transfer.new(name:params[:new_transfer][:name],amount:params[:new_transfer][:amount])
+    @transfer = Transfer.new(name: params[:new_transfer][:name], amount: params[:new_transfer][:amount])
     category = params[:new_transfer][:category]
     @transfer.category = Category.find(category.to_i)
     @transfer.author = current_user
