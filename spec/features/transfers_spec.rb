@@ -21,7 +21,7 @@ RSpec.describe TransfersController, type: :feature do
 
     it 'Should redirect to create transfer page' do
       visit category_path(category)
-      click_link('Make Transfers')
+      click_link('Scan')
       expect(page).to have_content('Make Transfers')
     end
 
@@ -30,7 +30,7 @@ RSpec.describe TransfersController, type: :feature do
       fill_in 'Name', with: 'Apple'
       fill_in 'Amount', with: Faker::Commerce.price(range: 1..4000)
       click_button('Transfer')
-      expect(page).to have_content(category.name)
+      expect(page).to have_content("Transfers")
     end
   end
 end

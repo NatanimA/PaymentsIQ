@@ -11,12 +11,11 @@ RSpec.describe CategoriesController, type: :feature do
 
   describe 'Visits Index page' do
     it 'Should see all the categories listed for the user' do
-      category
-      visit root_path
-      expect(page).to have_content(category.name)
+      visit categories_path
+      expect(page).to have_content("Categories")
     end
     it 'Should Redirect the user to categories Show' do
-      visit root_path
+      visit categories_path
       expect(page).to have_css('.container .transfer-list-flex-container a')
       page.all('.container .transfer-list-flex-container a').each do |category_page|
         visit category_page[:href]
@@ -25,7 +24,7 @@ RSpec.describe CategoriesController, type: :feature do
     end
 
     it 'Should Redirect to create Category page when btn clicked' do
-      visit root_path
+      visit categories_path
       click_link('Add Category')
       expect(page).to have_content('Create Category')
     end

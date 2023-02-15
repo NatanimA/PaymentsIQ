@@ -17,12 +17,12 @@ RSpec.describe CategoriesController, type: :request do
     end
 
     it 'Returns the correct number of categories' do
-      get root_path
+      get categories_path
       expect(assigns(:categories).count).to eq(3)
     end
 
     it 'Returns only categories that belongs to the user' do
-      get root_path
+      get categories_path
       assigns(:categories).each do |category|
         expect(category.user).to eq(user)
       end
