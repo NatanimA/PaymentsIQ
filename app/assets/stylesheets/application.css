@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+body {
+  color: #434b54;
+}
 .nav-filter-container {
   margin-top: 1rem;
   display: flex;
@@ -27,6 +29,16 @@
 
 .responsive-image {
   width: 10rem;
+}
+
+.btn-holder {
+  width: 100%;
+  background-color:#5fb523
+}
+
+.transfers-holder{
+  height: 100%;
+  overflow-y:auto;
 }
 
 .img-responsive {
@@ -74,12 +86,32 @@
   font-size: 2rem;
 }
 
+.auth-login-form-container {
+  margin: 5rem auto;
+  text-align: center;
+  padding: 4rem;
+}
+
+.auth-login-container{
+  position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color:hwb(0 100% 0%);
+
+}
+
+.auth-top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .login-form-container {
   background-color: #3778c2;
   margin: 5rem auto;
   text-align: center;
   padding: 4rem;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
 }
 
 .shared-link {
@@ -103,6 +135,7 @@ nav {
 
 .link-container {
   text-decoration: none;
+  color: #344563;
 }
 
 .fa-down-red {
@@ -232,6 +265,7 @@ body.active {
 
 .make-transfers {
   position: absolute;
+  background-color: #5fb523;
   bottom: 1rem;
 }
 
