@@ -44,6 +44,7 @@ After you're finished please remove all the comments and instructions!
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -205,6 +206,12 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Login Confirmations**
+- [ ] **Interaction of Transfers To Users**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
