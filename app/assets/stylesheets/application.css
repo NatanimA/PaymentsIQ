@@ -14,8 +14,6 @@
  *= require_self
  */
 
- @import "font-awesome";
-
 .nav-filter-container{
     margin-top: 1rem;
     display: flex;
@@ -50,6 +48,27 @@
     color: #fff;
     margin-top: 5rem;
     text-align: center;
+}
+.container-fluid {
+    height: 100vh;
+}
+.flex-field-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border: 1px solid silver;
+    padding: 2rem;
+}
+
+.quote-logo {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.nav-profile-pic {
+    color: #fff;
+    font-size: 2rem;
 }
 
 .login-form-container {
@@ -179,7 +198,6 @@ nav {
     filter: blur(4px);
 }
 
-
 body.active {
     overflow-y: hidden;
     display: inline;
@@ -193,6 +211,30 @@ body.active {
         width: 150px;
     }
 }
+
+.transfer-flex-container {
+    position: relative;
+    height: fit-content;
+}
+
+.transfer-list-flex-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.make-transfers{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.cash-text {
+    color: #5fb523;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 @media only screen and (min-width: 768px) {
     #mobile-navbar {
             display: none;
@@ -231,5 +273,13 @@ body.active {
 
          .nav-link a:hover::after {
              transform: scaleX(1);
+         }
+         nav {
+            height: 2rem;
+         }
+
+         .container-categories{
+            margin: 1rem auto;
+            width: 100%;
          }
 }
