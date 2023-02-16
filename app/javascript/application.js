@@ -11,6 +11,8 @@ const body = document.querySelector('body');
 const current = document.querySelector('.current-page')
 const searchIcon = document.querySelector('.search-icon')
 const recent = document.querySelector('.recent-container')
+const login = document.getElementById('.login-btn-touch')
+
 
 hamburger.addEventListener('click', () => {
     headline.classList.toggle('active');
@@ -32,3 +34,5 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventLis
     searchIcon.classList.remove('active');
     recent.classList.remove('active');
 }));
+
+
