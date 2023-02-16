@@ -4,11 +4,12 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  root "categories#index"
   resources :categories do
     resources :transfers
   end
 
   resources :users
+
+  root to: "homes#index", as: 'auth_login'
 
 end

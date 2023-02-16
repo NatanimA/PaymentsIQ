@@ -19,11 +19,9 @@
   </head>
 
   <body>
-  <% if user_signed_in?%>
     <header>
         <%= render 'layouts/header' %>
     </header>
-  <% end %>
     <div class="container">
     <% if not flash.empty? %>
       <% if flash[:notice] %>

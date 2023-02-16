@@ -7,7 +7,7 @@
     <div class="col">
       <div class="card-body">
         <div class="d-flex justify-content-between">
-        <h5 class="card-title"><%= category.name %></h5>
+        <h5 class="card-title text-muted text-dark"><%= category.name %></h5>
         <% amount = 0 %>
         <% category.transfers.each do |transfer| %>
             <% amount += transfer.amount %>

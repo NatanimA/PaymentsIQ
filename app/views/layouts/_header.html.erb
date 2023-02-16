@@ -1,6 +1,7 @@
 <nav>
+  <% if user_signed_in?%>
         <ul id="nav-menu">
-          <li class="nav-link"><%= link_to "Home", root_path %></li>
+          <li class="nav-link"><%= link_to "Home", categories_path %></li>
           <li class="nav-link"><%= link_to "Profile", user_path(current_user.id) %></li>
           <li class="nav-link">
           <%= link_to  destroy_user_session_path, method: :get do %>
@@ -12,24 +13,24 @@
         <div class="top-nav-container d-flex justify-content-between">
           <% if @name == "Categories" %>
           <div id="hamb">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar fs-3 m-2"></span>
+            <span class="bar fs-3 m-2"></span>
+            <span class="bar fs-3 m-2"></span>
           </div>
           <% else %>
-            <%= link_to root_path,class:"link-container arrow-back-link" do %>
-                <i class="fa-solid fa-chevron-left"></i>
+            <%= link_to categories_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-arrow-left-long"></i>
             <% end %>
           <% end %>
           <div class="current-page">
             <span><%= @name %></span>
           </div>
           <div class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass fs-3 m-3"></i>
           </div>
           </div>
           <ul id="mobile-nav-menu">
-            <li class="mobile-nav-link"><%= link_to "Home", root_path %></li>
+            <li class="mobile-nav-link"><%= link_to "Home", categories_path %></li>
             <li class="nav-link">
             <%= link_to user_path(current_user.id) do %>
                 <i class="nav-profile-pic fa-solid fa-user"></i>
@@ -42,14 +43,45 @@
             </li>
             <li class="mobile-nav-link">Signed in as <%= current_user.email %></li>
           </ul>
-    <div class="container-fluid recent-container">
-     <div class="row flex-row flex-nowrap nav-filter-container">
-        <div class="col-3">
-           Most recent
-        </div>
-        <div class="col-3">
-           Most Ancient
-        </div>
     </div>
-    </div>
+    <% else %>
+      <% if current_page?(new_user_session_path)%>
+      <div class="d-flex mx-2 justify-content-between">
+        <%= link_to auth_login_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-arrow-left-long"></i>
+        <% end %>
+        <p class="text-light fs-3 align-self-start py-2">LOGIN</p>
+        <div id="login-btn-touch">
+          <p class="fs-3">Login</p>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll('#login-btn-touch').forEach((link) => {
+            link.addEventListener('click',() => {
+                const login_form = document.querySelector('#login-form-sub')
+                login_form.submit()
+            })
+        })
+      </script>
+      <% else %>
+        <div class="d-flex mx-2 justify-content-between">
+        <%= link_to auth_login_path,class:"link-container arrow-back-link" do %>
+                <i class="fa-solid fa-arrow-left-long"></i>
+        <% end %>
+        <p class="text-light fs-3 align-self-start py-2">SIGN UP</p>
+        <div id="signup-btn-touch">
+          <p class="fs-3">Next</p>
+        </div>
+        <script>
+        document.querySelectorAll('#signup-btn-touch').forEach((link) => {
+            link.addEventListener('click',() => {
+                const login_form = document.querySelector('#register-form-controll')
+                login_form.submit()
+            })
+        })
+      </script>
+      </div>
+      <% end %>
+    <% end %>
+
 </nav>

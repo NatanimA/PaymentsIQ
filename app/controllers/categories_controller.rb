@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
     @category.user = current_user
     if @category.save
       flash[:notice] = 'Category successfully created'
-      redirect_to root_path
+      redirect_to categories_path
     else
       flash[:alert] = @category.errors.full_messages.join(', ')
       render 'new', locals: { category: @category }
@@ -25,7 +25,8 @@ class CategoriesController < ApplicationController
 
   def show
     @transfers = Transfer.where(author_id: current_user.id, category_id: params[:id]).order(:created_at).reverse_order
-    @name = 'Transfers'
+    @name = 'TRANSFERS'
     @category_id = params[:id]
+    @category = Category.find(@category_id)
   end
 end

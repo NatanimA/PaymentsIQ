@@ -1,6 +1,12 @@
 <div class="card w-100 mb-3">
   <div class="card-body d-flex justify-content-between p-4">
-    <h5 class="card-title"><%= transfer.name %></h5>
-    <p class="card-text"><i class="fa-down-red fa-solid fa-down-long"></i>$<%= transfer.amount%></p>
+    <image src="<%= transfer.category.icon %>" class="transfer-image-responsive"></image>
+    <div class="title-date-container">
+      <h5 class="card-title"><%= transfer.name %></h5>
+      <% date = transfer.created_at %>
+      <% date = date.strftime('%b/%d/%Y') %>
+      <p><%= date %></p>
+    </div>
+    <strong>$<%= transfer.amount%></strong>
   </div>
 </div>
