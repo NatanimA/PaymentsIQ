@@ -1,15 +1,12 @@
-<div class="container-fluid d-flex justify-content-between transfer-flex-container">
-<% if @transfers.length != 0 %>
-<h5><%= @transfers[0].category.name %></h5>
-<% end %>
-<% amount = 0%>
-<% @transfers.each do |transfer| %>
-<% amount += transfer.amount %>
-<% end %>
-<span>$<%= amount %></span>
+<div class="d-flex justify-content-between transfer-flex-container">
+    <h5><%= @category.name %></h5>
+    <% amount = 0%>
+    <% @transfers.each do |transfer| %>
+    <% amount += transfer.amount %>
+    <% end %>
+    <strong>$<%= amount %></strong>
 </div>
-<hr>
-<div class="container-fluid  transfer-list-flex-container">
+<div class="container-fluid  transfer-list-flex-container mt-4">
     <div class="transfers-holder">
     <% if @transfers.length != 0 %>
         <% @transfers.each do |transfer| %>
