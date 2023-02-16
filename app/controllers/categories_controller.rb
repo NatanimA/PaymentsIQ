@@ -25,7 +25,8 @@ class CategoriesController < ApplicationController
 
   def show
     @transfers = Transfer.where(author_id: current_user.id, category_id: params[:id]).order(:created_at).reverse_order
-    @name = 'Transfers'
+    @name = 'TRANSFERS'
     @category_id = params[:id]
+    @category = Category.find(@category_id)
   end
 end

@@ -30,7 +30,7 @@ RSpec.describe TransfersController, type: :feature do
       fill_in 'Name', with: 'Apple'
       fill_in 'Amount', with: Faker::Commerce.price(range: 1..4000)
       click_button('Transfer')
-      expect(page).to have_content('Transfers')
+      expect(page).to have_content('TRANSFERS')
     end
   end
 end
