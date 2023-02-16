@@ -88,21 +88,21 @@ body {
 }
 
 .auth-login-form-container {
-  position:absolute;
-  bottom:1rem;
-  width:100%;
-  text-align:center;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .login-f-container {
-  padding:1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }
 
 .form-boot {
-  border:none;
-  outline:none;
-  padding:1rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
 }
 
 .auth-login-container {
@@ -130,32 +130,32 @@ body {
 
 .shared-link {
   color: #434b54;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-.pp-holder{
-  padding:2rem;
-  width:10rem;
-  height:10rem;
-  font-size:4rem;
-  color:#000;
-  background-color:#fff;
-  border-radius:40%;
+.pp-holder {
+  padding: 2rem;
+  width: 10rem;
+  height: 10rem;
+  font-size: 4rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 40%;
 }
 
 .up-text-container {
-  padding:2rem;
-  padding-top:3rem;
-  text-align:center;
-  font-size:1.5rem;
+  padding: 2rem;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .register-form-controller {
-  border:none;
-  border-bottom:1px solid silver;
-  outline:none;
-  padding:1rem;
-  width:100%;
+  border: none;
+  border-bottom: 1px solid silver;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
 }
 
 #signup-btn-touch {
@@ -163,15 +163,14 @@ body {
 }
 
 .pp-container {
-  display:flex;
-  flex-direction:row;
-  gap:2rem;
-  width:100%;
-
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
 }
 
 .shared-links-container {
-  text-align:center;
+  text-align: center;
 }
 
 .current-page.active {
@@ -190,7 +189,7 @@ nav {
 }
 
 #login-btn-touch {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .link-container {
@@ -314,30 +313,29 @@ body.active {
 .transfer-flex-container {
   position: relative;
   padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
 }
 
 .transfer-image-responsive {
-  width:5rem;
-  height:6rem;
+  width: 5rem;
+  height: 6rem;
 }
 
 .title-date-container {
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .font-weight-bold {
-  font-weight:400;
+  font-weight: 400;
 }
 
 .transfer-list-flex-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y:auto;
-
+  overflow-y: auto;
 }
 
 .make-transfers {
