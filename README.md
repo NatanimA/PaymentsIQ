@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 PaymentsIQ <a name="about-project"></a>
 
-> A Payments app where Users can track their expenses by putting them in categories, and they can manage their overall Transactions
+> PaymentsIq is a Ruby on Rails powered app designed to help users keep track of and organize their day-to-day money transactions. This application allows users to quickly and easily view their financial transaction history, balance their accounts, adjust their budgeting limits, set up recurring payments, and more. PaymentsIq is the perfect solution for anyone looking to stay organized and gain control of their finances. Sign up now and start taking control of your money!
 
 **Blog App**
 
