@@ -87,6 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: PaymentsIQ_production
-  username: PaymentsIQ
-  password: <%= ENV["PAYMENTSIQ_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
