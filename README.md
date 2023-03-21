@@ -101,7 +101,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Project is in progress and not deployed yet
+> https://paymentsiq.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
